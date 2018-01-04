@@ -401,7 +401,7 @@ function FindItem(item)
            end
        end
 	end
-	return bag, slot, texture, totalcount
+	return bag, slot, texture, (totalcount - 1)
 end
 
 -- Checks if the target is in range (28 yards)
