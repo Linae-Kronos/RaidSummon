@@ -46,6 +46,12 @@ function RaidSummon_EventFrame_OnEvent()
 		if string.find(arg1, "^123") then
 			-- DEFAULT_CHAT_FRAME:AddMessage("CHAT_MSG")
 			SendAddonMessage(MSG_PREFIX_ADD, arg2, "RAID")
+		elseif string.find(arg1, "^sum") then
+			-- DEFAULT_CHAT_FRAME:AddMessage("CHAT_MSG")
+			SendAddonMessage(MSG_PREFIX_ADD, arg2, "RAID")
+		elseif string.find(arg1, "^summon") then
+			-- DEFAULT_CHAT_FRAME:AddMessage("CHAT_MSG")
+			SendAddonMessage(MSG_PREFIX_ADD, arg2, "RAID")
 		end
 	elseif event == "CHAT_MSG_ADDON" then
 		if arg1 == MSG_PREFIX_ADD then
@@ -401,7 +407,7 @@ function FindItem(item)
            end
        end
 	end
-	return bag, slot, texture, totalcount
+	return bag, slot, texture, (totalcount - 1)
 end
 
 -- Checks if the target is in range (28 yards)
